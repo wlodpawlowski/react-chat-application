@@ -1,0 +1,88 @@
+/* Application specific CSS */
+footer {
+    color: #ffffff;
+    position: fixed;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    z-index: 1000;
+    background: linear-gradient(to bottom, #ff3399 0%, #990033 100%);
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(to right, #ff9933 0%, #ff0000 100%) 100% 0 0 0/5px 0 0 0 stretch;
+}
+
+footer .input-field input, button {
+    border-color: #ffffff;
+}
+
+footer .input-field input:focus {
+    border-color: #ffffff !important;
+}
+
+footer .input-field input[type=text]::-webkit-input-placeholder {
+    color: #f3f3f3;
+}
+
+button {
+    background: linear-gradient(to bottom, #ff9933 0%, #cc0066 100%);
+}
+
+.chip {
+    font-style: italic;
+    background: linear-gradient(to bottom, #ff9933 0%, #cc0066 100%);
+    box-shadow: 0 1px 4px 0px #404040;
+    color: #ffffff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.collection {
+    margin: -1px 100px 130px 100px;
+    height: 100vh;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-image: linear-gradient(to top, #ff9933 0%, #ff0000 100%) 0 100% 0 100%/0 5px 0 5px stretch;
+    border-bottom: 0;
+    border-top: 0;
+    /*background: linear-gradient(to top right, #ff3399 0%, #ffff00 100%);*/
+}
+
+.collection-item {
+    margin: 20px 50px !important;
+    width: 50%;
+    color: #ffffff;
+    background: linear-gradient(to top right, #ff9933 0%, #cc0066 100%);
+    padding: 20px;
+    border-radius: 30px;
+    border: 5px solid #ff9933 !important;
+}
+
+.message-date {
+    color: #ffffff;
+}
+
+body {
+    background-image: url('https://orig00.deviantart.net/356e/f/2017/300/3/3/abstract_background_texture_08_by_llexandro-dbrv30l.jpg');
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-attachment: fixed;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.title {
+    color: #ffff00;
+}
+
+.message-content {
+    border-top: 1px solid #ffffff;
+    margin-top: 15px !important;
+    padding: 15px 15px;
+}

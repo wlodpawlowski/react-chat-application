@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React Chat Application</title>
+    <!-- Import Google Icon Font -->
+    <link rel="stylsheet" href="//fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- Import materialize.css -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" media="screen,projection" />
+  </head>
+  <body>
+    <div id="root">
+
+    </div>
+    <script>
+        const PubNub = PUBNUB.init({
+          publish_key : 'pub-c-912f7a52-dcae-4f17-ac62-66bce4ef29e2',
+          subscribe_key : 'sub-c-24dd7414-119d-11e8-92ea-7a3d09c63f1f',
+          ssl : (location.protocol.toLowerCase() === 'https:'),
+        });
+    
+        this.PubNub.subscribe({
+          channel : 'ReactChat',
+          message : function doSomething(message) {
+    
+          }
+        });
+    
+        this.PubNub.publish({
+          channel : 'ReactChat',
+          message : 'Hello World',
+        });
+      </script>
+  <script type="text/javascript" src="/app.da59611e9fb41f379e73.js"></script></body>
+</html>
