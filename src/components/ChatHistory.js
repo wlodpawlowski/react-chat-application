@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-export default class ChatHistory extends React.Component {
+class ChatHistory extends React.Component {
   static propTypes = {
     history: React.PropTypes.array,
   };
   render() {
     const {props} = this;
-    console.log('ChatHistory was called!');
     return (
         <ul className="collection">
             {props.history.map((messageObj) => {
@@ -16,7 +15,7 @@ export default class ChatHistory extends React.Component {
               return (
                     <li className="collection-item avatar" key={messageObj.When}>
                         <img src={imgURL} alt={messageObj.Who} className="circle"/>
-                        <span className="title">Jeff Bezos #{messageObj.Who}</span>
+                        <span className="title">Chat bot #{messageObj.Who}</span>
                         <p>
                             <i className="prefix mdi-action-alarm" />
                             <span className="message-date">{messageDateTime}</span>
@@ -31,3 +30,4 @@ export default class ChatHistory extends React.Component {
   }
 }
 
+export default ChatHistory;
