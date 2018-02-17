@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default class ChatInput extends React.Component {
+class ChatInput extends React.Component {
   static propTypes = {
     userID: React.PropTypes.string,
     sendMessage: React.PropTypes.func,
@@ -39,7 +39,7 @@ export default class ChatInput extends React.Component {
                         <input ref="txtMessage" type="text" placeholder="Type your message"/>
                         <span className="chip left">
                             <img src={imgURL}/>
-                            <span>Jeff Bezos #{props.userID}</span>
+                            <span>Chat bot #{props.userID}</span>
                         </span>
                     </div>
                     <div className="input-field col s2">
@@ -53,4 +53,6 @@ export default class ChatInput extends React.Component {
     );
   }
 }
+
+export default ChatInput;
 
