@@ -46,6 +46,7 @@ button {
     border-image: linear-gradient(to top, #ff9933 0%, #ff0000 100%) 0 100% 0 100%/0 5px 0 5px stretch;
     border-bottom: 0;
     border-top: 0;
+    overflow-y: scroll;
     /*background: linear-gradient(to top right, #ff3399 0%, #ffff00 100%);*/
 }
 
@@ -85,4 +86,8 @@ body {
     border-top: 1px solid #ffffff;
     margin-top: 15px !important;
     padding: 15px 15px;
+}
+
+.active {
+    color: #ffffff !important;
 }
