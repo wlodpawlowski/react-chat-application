@@ -29,8 +29,9 @@ class App extends React.Component {
     });
     this.PubNub.subscribe({
       channel: 'ReactChat',
-      message: function doSomething(message) {
-      },
+      message: (message) => this.setState({
+        history: this.state.history.concat(message),
+      }),
     });
   }
 
@@ -45,10 +46,9 @@ class App extends React.Component {
   }
 
   sendMessage = (message) => {
-    console.log('sendMessage', message);
     this.PubNub.publish({
       channel: 'ReactChat',
-      message: 'Hello World!',
+      message: message,
     });
   }
 }
